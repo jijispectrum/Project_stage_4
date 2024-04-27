@@ -1,0 +1,43 @@
+{% load static %}
+{% include 'header.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <!-- Add your CSS links here -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/receipt.css' %}">
+</head>
+<body>
+
+<header>
+    <!-- Add your header content here -->
+</header>
+
+<section class="receipt_section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Receipt</h2>
+                <div class="receipt_details">
+                    <p><strong>Order Number:</strong> {{ order.id }}</p>
+                    <p><strong>Total Amount:</strong> ${{ order.total_price }}</p>
+                    <!-- Add any other order details you want to display -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <!-- Add your footer content here -->
+</footer>
+
+<!-- Add your JavaScript links here -->
+<script src="{% static 'js/script.js' %}"></script>
+
+</body>
+</html>
